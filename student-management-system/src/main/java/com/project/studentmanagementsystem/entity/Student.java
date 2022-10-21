@@ -22,9 +22,8 @@ public class Student {
 		super();
 	}
 	
-	public Student(Long id, String firstName, String lastName, String email) {
+	public Student(String firstName, String lastName, String email) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

@@ -18,16 +18,15 @@ public class StudentServiceImpl implements StudentService{
 		this.repository = repository;
 	}
 
-
-	/*
-	new Student((long) 1, "Raghav", "Kapoor", "raghav.kapoor@gmail.com")
-	new Student((long) 2, "Henry", "Potter", "potter.henry@yahoo.com"),
-	new Student((long) 3, "Patrick", "Lam", "pat.lam@hotmail.com")
-	*/
-
 	@Override
 	public List<Student> getAllStudent() {
 		return repository.findAll();
+	}
+
+
+	@Override
+	public void addStudent(Student student) {
+		repository.save(student);
 	}
 
 }
