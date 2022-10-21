@@ -1,5 +1,10 @@
 package com.project.studentmanagementsystem.service;
 
-public interface StudentService {
+import java.util.List;
 
+import com.project.studentmanagementsystem.entity.Student;
+
+public interface StudentService {
+	
+	List<Student> getAllStudent();
 }
