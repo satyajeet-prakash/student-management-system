@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"> 	
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Student Management System</title>
@@ -10,7 +10,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	
+
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<a class="navbar-brand" href="#">Student Management System</a>
 
@@ -21,7 +21,8 @@
 
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" th:href="@{/students}">Student Management</a></li>
+				<li class="nav-item"><a class="nav-link" th:href="@{/students}">Student
+						Management</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -30,42 +31,25 @@
 			<div
 				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
 				<h1 class="text-center">Update Student Form</h1>
-				<div class="card-body">
-					<form th:action="@{/students/{id}(id=${student.id})}" th:object="${student}" th:method="POST">
+					<form th:action="@{/students/{id}(id=${student.id})}"
+						th:object="${student}" th:method="POST">
 						<div class="form-group">
-							<label>Student First Name</label>
-							<input 
-							type="text"
-							name="firstName"
-							th:field="*{firstName}"
-							class="form-control"
-							th:placeholder=${student.firstName}
-							/>
+							<label>Student First Name</label> <input type="text"
+								name="firstName" th:field="*{firstName}" class="form-control"
+								th:placeholder=${student.firstName} />
 						</div>
 						<div class="form-group">
-							<label>Student Last Name</label>
-							<input 
-							type="text"
-							name="lastName"
-							th:field="*{lastName}"
-							class="form-control"
-							th:placeholder=${student.lastName}
-							/>
+							<label>Student Last Name</label> <input type="text"
+								name="lastName" th:field="*{lastName}" class="form-control"
+								th:placeholder=${student.lastName} />
 						</div>
 						<div class="form-group">
-							<label>Student Email</label>
-							<input 
-							type="text"
-							name="email"
-							th:field="*{email}"
-							class="form-control"
-							th:placeholder=${student.email}
-							/>
+							<label>Student Email</label> <input type="text" name="email"
+								th:field="*{email}" class="form-control"
+								th:placeholder=${student.email} />
 						</div>
 						<div class="box">
-						 	<button type="submit" class="btn btn-primary">
-						 		Submit
-						 	</button>
+							<button type="submit" class="btn btn-primary">Submit</button>
 						</div>
 					</form>
 				</div>
